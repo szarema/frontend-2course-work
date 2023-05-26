@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .btn-primary {
+    @apply p-3 text-white bg-blue-600 rounded-lg transition hover:bg-blue-800;
+  }
+}
