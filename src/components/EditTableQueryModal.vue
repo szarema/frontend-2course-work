@@ -36,11 +36,11 @@ export default {
   methods: {
     async editQuery() {
       const data = {
-        queryId: this.queryId,
-        query: this.query,
+        id: this.queryId,
+        value: this.query,
         tableName: this.tableName,
       };
-      await api.put("table-query/modify-table-query", data).then((response) => {
+      await api.put("table-query/modify-query", data).then((response) => {
         this.$emit("getResponse", response);
       });
     },
