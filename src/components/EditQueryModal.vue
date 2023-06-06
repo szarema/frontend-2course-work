@@ -33,11 +33,11 @@ export default {
   methods: {
     async editQuery() {
       const data = {
-        queryId: this.queryId,
-        query: this.query,
+        id: this.queryId,
+        value: this.query,
       };
       await api
-        .put("single-query/modify-single-query", data)
+        .put("single-query/modify-query", data)
         .then((response) => {
           this.$emit("getResponse", response);
         });
