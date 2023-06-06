@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { api } from "../../api";
 export default {
   data() {
     return {
@@ -28,7 +29,7 @@ export default {
   methods: {
     async deleteQuery() {
       await api
-        .delete("single-query/delete-single-query-by-id/" + this.queryId)
+        .delete("single-query/delete-query-by-id/" + this.queryId)
         .then((response) => {
           this.$emit("getResponse", response);
         });
