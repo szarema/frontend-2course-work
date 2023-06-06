@@ -30,7 +30,7 @@ export default {
   methods: {
     async getQuery() {
       await api
-        .get("single-query/get-single-query-by-id/" + this.queryId)
+        .get("single-query/get-query-by-id/" + this.queryId)
         .then((response) => {
           this.$emit("getResponse", response);
         });
