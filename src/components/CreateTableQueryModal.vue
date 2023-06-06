@@ -47,11 +47,11 @@ export default {
   methods: {
     async createQuery() {
       const data = {
-        query: this.query,
+        value: this.query,
         tableName: this.tableName,
       };
       await api
-        .post("table-query/add-new-query-to-table", data)
+        .post("table-query/add-new-query", data)
         .then((response) => {
           this.$emit("getResponse", response);
         });
