@@ -24,13 +24,13 @@ import { api } from "../../api";
 export default {
   data() {
     return {
-      queryId: 1,
+      id: 1,
     };
   },
   methods: {
     async execQuery() {
       await api
-        .get("single-query/execute-single-query-by-id/" + this.queryId)
+        .get("single-query/execute-query-by-id/" + this.queryId)
         .then((response) => {
           this.$emit("getResponse", response);
         });
